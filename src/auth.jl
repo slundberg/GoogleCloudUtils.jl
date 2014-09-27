@@ -26,7 +26,7 @@ function gcloud_token(keyFile="", scope="https://www.googleapis.com/auth/devstor
 		# otherwise we have to prove our identity with a private key
 	    catch
 			@pyimport oauth2client.client as oauth 
-
+			
 			data = open(JSON.parse, keyFile)
 			assertion = oauth.SignedJwtAssertionCredentials(
 			    data["client_email"],
@@ -48,6 +48,6 @@ end
 
 # this is the text for the Authorization header
 function gcloud_authorization(keyFile="", scope="https://www.googleapis.com/auth/devstorage.read_write")
-	token = gcloud_token()
+	token = gcloud_token(keyFile, scope)
 	token["token_type"]*" "token["access_token"]
 end
