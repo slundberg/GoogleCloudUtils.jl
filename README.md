@@ -7,7 +7,6 @@ Below is a simple example using `gcloud_authorization()` to get an access token 
 
 ```julia
 using Requests
-using JSON
 
 # save a text file to cloud storage
 post("https://www.googleapis.com/upload/storage/v1/b/your-bucket-name-here/o",
